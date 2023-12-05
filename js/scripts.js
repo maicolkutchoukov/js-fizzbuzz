@@ -24,3 +24,18 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 
 
 
+for (let i = 1; i <= 100; i++){
+    if ((i % 3 != 0) && (i % 5 != 0)){
+        console.log(i)
+    }
+    else if ((i % 3 == 0) && (i % 5 == 0)){
+        console.log('Fizzbuzz');
+    }
+    else if (i % 3 == 0){
+        console.log('Fizz')
+    }
+    else {
+        console.log('Buzz')
+    }
+
+}
