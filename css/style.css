@@ -1,0 +1,31 @@
+h1{
+    font-size: 5em;
+}
+
+.bg-color{
+    background-color: #083B4C;
+}
+
+.my-container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.square{
+    background-color: #1389B2;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.fizz{
+    background-color: #0CD6A1;
+}
+
+.buzz{
+    background-color: #FFD166;
+}
+
+.fizzbuzz{
+    background-color: #F0466F;
+}

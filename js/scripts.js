@@ -21,21 +21,43 @@ a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 
  */
+const domContainer = document.getElementById('dom-container');
+domContainer.classList.add('d-flex', 'flex-wrap', 'justify-content-between');
+const h1 = document.querySelector('h1');
+h1.classList.add('text-white','text-center','m-5', 'mt-0', 'fw-bold');
+h1.innerHTML = 'FizzBuzzDOM';
+const myContainer = document.querySelector('div:first-child');
+myContainer.classList.add('my-container');
+
 
 
 
 for (let i = 1; i <= 100; i++){
+    let newSquare = document.createElement('div');
+    domContainer.append(newSquare);
+    newSquare.classList.add('square', 'd-flex', 'justify-content-center', 'align-items-center', 'fs-5', 'fw-medium');
     if ((i % 3 != 0) && (i % 5 != 0)){
-        console.log(i)
-    }
-    else if ((i % 3 == 0) && (i % 5 == 0)){
-        console.log('Fizzbuzz');
-    }
-    else if (i % 3 == 0){
-        console.log('Fizz')
-    }
-    else {
-        console.log('Buzz')
+        console.log(i);
+        newSquare.innerHTML = i;
     }
 
+    else if ((i % 3 == 0) && (i % 5 == 0)){
+        console.log('Fizzbuzz');
+        newSquare.classList.add('fizzbuzz');
+        newSquare.innerHTML = 'Fizzbuzz';
+    }
+
+    else if (i % 3 == 0){
+        console.log('Fizz');
+        newSquare.classList.add('fizz');
+        newSquare.innerHTML = 'Fizz';
+
+
+    }
+
+    else {
+        console.log('Buzz');
+        newSquare.classList.add('buzz');
+        newSquare.innerHTML = 'Buzz';
+    }
 }
